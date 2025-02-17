@@ -1,4 +1,4 @@
-# data_catalogs
+# OpenADMET Data Catalogs
 
 As part of our open-science mission, OpenADMET aims to curate and disseminate ADMET (Absorption, Distribution, Metabolism, Excretion, and Toxicity) data used to train our models for general use.
 
