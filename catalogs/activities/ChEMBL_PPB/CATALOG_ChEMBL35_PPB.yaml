@@ -1,0 +1,36 @@
+aliases: {}
+data:
+  c30e77962fe51961:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/ChEMBL_PPB_PPB_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  f6916ec37e448849:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/ChEMBL_PPB_PPB_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+entries:
+  PPB_aggregated:
+    kwargs:
+      args:
+      - '{data(f6916ec37e448849)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  PPB_raw:
+    kwargs:
+      args:
+      - '{data(c30e77962fe51961)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
