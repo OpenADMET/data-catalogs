@@ -26,7 +26,7 @@ pip install intake
 
    ```python
    import intake
-   catalog = intake.open_catalog("https://github.com/OpenADMET/data-catalogs/blob/main/catalogs/activities/ChEMBL_LogD/CATALOG_ChEMBL35_LogD.yaml")
+   catalog = intake.open_catalog("https://github.com/OpenADMET/data-catalogs/blob/main/catalogs/activities/ChEMBL_pChEMBL_permissive/CATALOG_ChEMBL35_permissive.yaml")
    # also available on S3 
    ```
 
