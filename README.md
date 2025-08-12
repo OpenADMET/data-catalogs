@@ -20,18 +20,14 @@ pip install intake
 ```
 
 ## Usage
-1. Clone this repository or download the relevant catalog file:
 
-   ```bash
-   git clone https://github.com/OpenADMET/data_catalogs.git
-   cd data_catalogs
-   ```
 
 2. Open a Python session or Jupyter session and load a catalog:
 
    ```python
    import intake
-   catalog = intake.open_catalog("path/to/catalog.yaml")
+   catalog = intake.open_catalog("https://github.com/OpenADMET/data-catalogs/blob/main/catalogs/activities/ChEMBL_LogD/CATALOG_ChEMBL35_LogD.yaml")
+   # also available on S3 
    ```
 
 3. List available datasets:
@@ -45,7 +41,7 @@ pip install intake
    ```python
    print(catalog.entries) 
    >>> ...
-   df = catalog["dataset_name"].read()
+   df = catalog["PXR_aggregated"].read()
    ```
 
 
