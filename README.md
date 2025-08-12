@@ -12,32 +12,30 @@ This repository hosts `Intake` catalogs for various ADMET datasets curated by Op
 
 This repo is under very active development, we make no guarantees about the stability or correctness of any catalogs contained herein. 
 
-## Installation
-To use the `Intake` catalogs, install the required dependencies:
+## Use directly!
+
+You can use the data contained here directly by downloading it or cloning the repo
+
+## Usage of Catalogs
+
+1. To use the `Intake` catalogs, install the required dependencies:
 
 ```bash
 pip install intake
 ```
 
-## Usage
-
-
-2. Open a Python session or Jupyter session and load a catalog:
+2. Open a Python session or Jupyter session and load a catalog. Here we are loading a catalog of [pChEMBL](https://chembl.gitbook.io/chembl-interface-documentation/frequently-asked-questions/chembl-data-questions#what-is-pchembl) curated from [ChEMBL](https://www.ebi.ac.uk/chembl/) for a set of targets with functionality available in `openadmet_toolkit`: 
 
    ```python
    import intake
    catalog = intake.open_catalog("https://github.com/OpenADMET/data-catalogs/blob/main/catalogs/activities/ChEMBL_pChEMBL_permissive/CATALOG_ChEMBL35_permissive.yaml")
    # also available on S3 
    ```
-
 3. List available datasets:
-
    ```python
    catalog
    ```
-
-4. Load a specific dataset:
-
+4. Load a specific dataset, here for the Pregnane X receptor (PXR, CHEMBL3201)
    ```python
    print(catalog.entries) 
    >>> ...
