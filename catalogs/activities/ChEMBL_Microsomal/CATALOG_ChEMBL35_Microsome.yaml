@@ -1,0 +1,96 @@
+aliases: {}
+data:
+  497957224e6d8b02:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Microsome/ChEMBL_IC50_HLM_CL_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  567ae27b99fb5a59:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Microsome/ChEMBL_IC50_MLM_CL_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  65b820b4c131b0f6:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Microsome/ChEMBL_IC50_RLM_CL_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  9d29daa3b0e249ad:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Microsome/ChEMBL_IC50_RLM_CL_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  aca26d3c79c8ba53:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Microsome/ChEMBL_IC50_HLM_CL_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  c6130cbdcff1ceb0:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Microsome/ChEMBL_IC50_MLM_CL_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+entries:
+  HLM_CL_aggregated:
+    kwargs:
+      args:
+      - '{data(497957224e6d8b02)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  HLM_CL_raw:
+    kwargs:
+      args:
+      - '{data(aca26d3c79c8ba53)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  MLM_CL_aggregated:
+    kwargs:
+      args:
+      - '{data(c6130cbdcff1ceb0)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  MLM_CL_raw:
+    kwargs:
+      args:
+      - '{data(567ae27b99fb5a59)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  RLM_CL_aggregated:
+    kwargs:
+      args:
+      - '{data(65b820b4c131b0f6)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  RLM_CL_raw:
+    kwargs:
+      args:
+      - '{data(9d29daa3b0e249ad)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
