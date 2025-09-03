@@ -35,7 +35,7 @@ pip install intake
    ```python
    catalog
    ```
-4. Load a specific dataset, here for the Pregnane X receptor (PXR, CHEMBL3201)
+4. Load a specific dataset, here for the Pregnane X receptor (PXR, CHEMBL3401)
    ```python
    print(catalog.entries) 
    >>> ...
