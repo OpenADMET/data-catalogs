@@ -17,12 +17,18 @@ KEYWDS    NUCLEAR RECEPTOR, TRANSCRIPTION FACTOR, PROTAC, XENOBIOTIC RECEPTOR,
 KEYWDS   2 GENE REGULATION                                                      
 EXPDTA    X-RAY DIFFRACTION                                                     
 AUTHOR    V.DELFOSSE,T.HUET,W.BOURGUET                                          
+REVDAT   2   17-SEP-25 8R81    1       JRNL                                     
 REVDAT   1   11-JUN-25 8R81    0                                                
-JRNL        AUTH   V.DELFOSSE,T.HUET,W.BOURGUET                                 
-JRNL        TITL   CRYSTAL STRUCTURE OF THE HPXR-LBD IN COMPLEX WITH COMPOUND   
-JRNL        TITL 2 JMV6845                                                      
-JRNL        REF    TO BE PUBLISHED                                              
-JRNL        REFN                                                                
+JRNL        AUTH   L.BANSARD,G.LACONDE,V.DELFOSSE,T.HUET,M.AYEUL,E.RIGAL,       
+JRNL        AUTH 2 Q.DONATI,S.GERBAL-CHALOIN,M.DAUJAT-CHAVANIEU,L.BRUNEL,       
+JRNL        AUTH 3 B.LEGRAND,A.CHAVANIEU,A.R.MARTIN,J.PANNEQUIN,W.BOURGUET,     
+JRNL        AUTH 4 M.AMBLARD,J.M.PASCUSSI                                       
+JRNL        TITL   TARGETING PREGNANE X RECEPTOR WITH A POTENT AGONIST-BASED    
+JRNL        TITL 2 PROTAC TO DELAY COLON CANCER RELAPSE.                        
+JRNL        REF    ONCOGENESIS                   V.  14    34 2025              
+JRNL        REFN                   ISSN 2157-9024                               
+JRNL        PMID   40885723                                                     
+JRNL        DOI    10.1038/S41389-025-00573-2                                   
 REMARK   2                                                                      
 REMARK   2 RESOLUTION.    2.45 ANGSTROMS.                                       
 REMARK   3                                                                      
