@@ -1,4 +1,6 @@
 # OpenADMET Data Catalogs
+[![Logo](https://img.shields.io/badge/OSMF-OpenADMET-%23002f4a)](https://openadmet.org/)
+
 
 As part of our open-science mission, OpenADMET aims to curate and disseminate ADMET (Absorption, Distribution, Metabolism, Excretion, and Toxicity) data used to train our models for general use.
 
