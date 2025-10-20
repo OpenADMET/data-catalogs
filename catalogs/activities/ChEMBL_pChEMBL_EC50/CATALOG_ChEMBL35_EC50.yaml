@@ -1,0 +1,66 @@
+aliases: {}
+data:
+  076792b50b77d24e:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_EC50/ChEMBL_EC50_PXR_CHEMBL3401_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  63a96ead6ec7879d:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_EC50/ChEMBL_EC50_AHR_CHEMBL3201_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  b7a45d0aacee189c:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_EC50/ChEMBL_EC50_AHR_CHEMBL3201_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  d790bc208202a900:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_EC50/ChEMBL_EC50_PXR_CHEMBL3401_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+entries:
+  AHR_aggregated:
+    kwargs:
+      args:
+      - '{data(63a96ead6ec7879d)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  AHR_raw:
+    kwargs:
+      args:
+      - '{data(b7a45d0aacee189c)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  PXR_aggregated:
+    kwargs:
+      args:
+      - '{data(d790bc208202a900)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  PXR_raw:
+    kwargs:
+      args:
+      - '{data(076792b50b77d24e)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
