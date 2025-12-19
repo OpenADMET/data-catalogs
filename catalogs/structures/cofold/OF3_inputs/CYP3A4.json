@@ -1,6 +1,6 @@
 {
     	"queries":{
-    		"NAME": {
+    		"CYP3A4": {
     			"chains": [
     				{
     					"molecule_type": "protein",

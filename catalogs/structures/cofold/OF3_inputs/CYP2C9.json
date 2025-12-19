@@ -1,6 +1,6 @@
 {
     	"queries":{
-    		"NAME": {
+    		"CYP2C9": {
     			"chains": [
     				{
     					"molecule_type": "protein",

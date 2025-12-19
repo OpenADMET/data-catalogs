@@ -1,0 +1,355 @@
+==================================================
+Timestamp: 2025-12-18 17:23:51
+Query ID(s): NAME
+Error Type: OutOfMemoryError
+Error Message: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 0 has a total capacity of 15.47 GiB of which 2.50 GiB is free. Including non-PyTorch memory, this process has 12.94 GiB memory in use. Of the allocated memory 10.35 GiB is allocated by PyTorch, and 2.32 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+--------------------------------------------------
+Traceback:Traceback (most recent call last):
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/runner.py", line 640, in predict_step
+    batch, outputs = self(batch)
+                     ^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/runners/model_runner.py", line 58, in forward
+    return self.model(batch)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/model.py", line 643, in forward
+    rollout_output = self._rollout(
+                     ^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/model.py", line 394, in _rollout
+    self.aux_heads(
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/head_modules.py", line 189, in forward
+    si, zij = self.pairformer_embedding(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/prediction_heads.py", line 312, in forward
+    si, zij = self.pairformer_emb(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/prediction_heads.py", line 216, in pairformer_emb
+    si, zij = self.pairformer_stack(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/pairformer.py", line 457, in forward
+    s, z = checkpoint_blocks(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/utils/checkpointing.py", line 98, in checkpoint_blocks
+    return exec(blocks, args)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/utils/checkpointing.py", line 85, in exec
+    a = wrap(block(*a))
+             ^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/pairformer.py", line 177, in forward
+    z = self.pair_stack(
+        ^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/base_blocks.py", line 472, in forward
+    self.pair_transition(
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/layers/transition.py", line 127, in forward
+    x = self._transition(x=x, mask=mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/layers/transition.py", line 265, in _transition
+    x = self.swiglu(x)
+        ^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/primitives/activations.py", line 59, in forward
+    return LigerSiLUMulFunction.apply(self.linear_a(x), self.linear_b(x))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/autograd/function.py", line 581, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 41, in wrapper
+    return fn(ctx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 169, in forward
+    a, b, c = swiglu_forward(a, b)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 128, in swiglu_forward
+    c = torch.empty_like(a)
+        ^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 0 has a total capacity of 15.47 GiB of which 2.50 GiB is free. Including non-PyTorch memory, this process has 12.94 GiB memory in use. Of the allocated memory 10.35 GiB is allocated by PyTorch, and 2.32 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+====================================================================================================
+Timestamp: 2025-12-18 17:39:58
+Query ID(s): CYP1A2
+Error Type: OutOfMemoryError
+Error Message: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 0 has a total capacity of 15.47 GiB of which 2.50 GiB is free. Including non-PyTorch memory, this process has 12.94 GiB memory in use. Of the allocated memory 10.35 GiB is allocated by PyTorch, and 2.32 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+--------------------------------------------------
+Traceback:Traceback (most recent call last):
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/runner.py", line 640, in predict_step
+    batch, outputs = self(batch)
+                     ^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/runners/model_runner.py", line 58, in forward
+    return self.model(batch)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/model.py", line 643, in forward
+    rollout_output = self._rollout(
+                     ^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/model.py", line 394, in _rollout
+    self.aux_heads(
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/head_modules.py", line 189, in forward
+    si, zij = self.pairformer_embedding(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/prediction_heads.py", line 312, in forward
+    si, zij = self.pairformer_emb(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/prediction_heads.py", line 216, in pairformer_emb
+    si, zij = self.pairformer_stack(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/pairformer.py", line 457, in forward
+    s, z = checkpoint_blocks(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/utils/checkpointing.py", line 98, in checkpoint_blocks
+    return exec(blocks, args)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/utils/checkpointing.py", line 85, in exec
+    a = wrap(block(*a))
+             ^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/pairformer.py", line 177, in forward
+    z = self.pair_stack(
+        ^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/base_blocks.py", line 472, in forward
+    self.pair_transition(
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/layers/transition.py", line 127, in forward
+    x = self._transition(x=x, mask=mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/layers/transition.py", line 265, in _transition
+    x = self.swiglu(x)
+        ^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/primitives/activations.py", line 59, in forward
+    return LigerSiLUMulFunction.apply(self.linear_a(x), self.linear_b(x))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/autograd/function.py", line 581, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 41, in wrapper
+    return fn(ctx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 169, in forward
+    a, b, c = swiglu_forward(a, b)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 128, in swiglu_forward
+    c = torch.empty_like(a)
+        ^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 0 has a total capacity of 15.47 GiB of which 2.50 GiB is free. Including non-PyTorch memory, this process has 12.94 GiB memory in use. Of the allocated memory 10.35 GiB is allocated by PyTorch, and 2.32 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+====================================================================================================
+Timestamp: 2025-12-18 22:34:34
+Query ID(s): CYP1A2
+Error Type: OutOfMemoryError
+Error Message: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 0 has a total capacity of 15.47 GiB of which 2.50 GiB is free. Including non-PyTorch memory, this process has 12.94 GiB memory in use. Of the allocated memory 10.35 GiB is allocated by PyTorch, and 2.32 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+--------------------------------------------------
+Traceback:Traceback (most recent call last):
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/runner.py", line 640, in predict_step
+    batch, outputs = self(batch)
+                     ^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/runners/model_runner.py", line 58, in forward
+    return self.model(batch)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/model.py", line 643, in forward
+    rollout_output = self._rollout(
+                     ^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/projects/of3_all_atom/model.py", line 394, in _rollout
+    self.aux_heads(
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/head_modules.py", line 189, in forward
+    si, zij = self.pairformer_embedding(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/prediction_heads.py", line 312, in forward
+    si, zij = self.pairformer_emb(
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/heads/prediction_heads.py", line 216, in pairformer_emb
+    si, zij = self.pairformer_stack(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/pairformer.py", line 457, in forward
+    s, z = checkpoint_blocks(
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/utils/checkpointing.py", line 98, in checkpoint_blocks
+    return exec(blocks, args)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/utils/checkpointing.py", line 85, in exec
+    a = wrap(block(*a))
+             ^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/pairformer.py", line 177, in forward
+    z = self.pair_stack(
+        ^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/latent/base_blocks.py", line 472, in forward
+    self.pair_transition(
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/layers/transition.py", line 127, in forward
+    x = self._transition(x=x, mask=mask)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/layers/transition.py", line 265, in _transition
+    x = self.swiglu(x)
+        ^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/model/primitives/activations.py", line 59, in forward
+    return LigerSiLUMulFunction.apply(self.linear_a(x), self.linear_b(x))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/torch/autograd/function.py", line 581, in apply
+    return super().apply(*args, **kwargs)  # type: ignore[misc]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 41, in wrapper
+    return fn(ctx, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 169, in forward
+    a, b, c = swiglu_forward(a, b)
+              ^^^^^^^^^^^^^^^^^^^^
+  File "/home/pwalters/miniforge3/envs/of3/lib/python3.11/site-packages/openfold3/core/kernels/triton/swiglu.py", line 128, in swiglu_forward
+    c = torch.empty_like(a)
+        ^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.54 GiB. GPU 0 has a total capacity of 15.47 GiB of which 2.50 GiB is free. Including non-PyTorch memory, this process has 12.94 GiB memory in use. Of the allocated memory 10.35 GiB is allocated by PyTorch, and 2.32 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+
+==================================================

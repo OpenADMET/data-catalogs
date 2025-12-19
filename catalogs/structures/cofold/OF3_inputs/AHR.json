@@ -1,6 +1,6 @@
 {
     	"queries":{
-    		"NAME": {
+    		"AHR": {
     			"chains": [
     				{
     					"molecule_type": "protein",

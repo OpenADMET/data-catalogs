@@ -1,0 +1,54 @@
+{
+    "seeds": [
+        42
+    ],
+    "queries": {
+        "CYP1A2": {
+            "query_name": "CYP1A2",
+            "chains": [
+                {
+                    "molecule_type": "PROTEIN",
+                    "chain_ids": [
+                        "A"
+                    ],
+                    "sequence": "MALSQSVPFSATELLLASAIFCLVFWVLKGLRPRVPKGLKSPPEPWGWPLLGHVLTLGKNPHLALSRMSQRYGDVLQIRIGSTPVLVLSRLDTIRQALVRQGDDFKGRPDLYTSTLITDGQSLTFSTDSGPVWAARRRLAQNALNTFSIASDPASSSSCYLEEHVSKEAKALISRLQELMAGPGHFDPYNQVVVSVANVIGAMCFGQHFPESSDEMLSLVKNTHEFVETASSGNPLDFFPILRYLPNPALQRFKAFNQRFLWFLQKTVQEHYQDFDKNSVRDITGALFKHSKKGPRASGNLIPQEKIVNLVNDIFGAGFDTVTTAISWSLMYLVTKPEIQRKIQKELDTVIGRERRPRLSDRPQLPYLEAFILETFRHSSFLPFTIPHSTTRDTTLNGFYIPKKCCVFVNQWQVNHDPELWEDPSEFRPERFLTADGTAINKPLSEKMMLFGMGKRRCIGEVLAKWEIFLFLAILLQQLEFSVPPGVKVDLTPIYGLTMKHARCEHVQARLRFSIN",
+                    "non_canonical_residues": null,
+                    "smiles": null,
+                    "ccd_codes": null,
+                    "paired_msa_file_paths": null,
+                    "main_msa_file_paths": [
+                        "/tmp/of3_colabfold_msas/main/db82445986c3c5c7bcb87120e3f23fa9423893de8fb554f183c5c666088f41ef.npz"
+                    ],
+                    "template_alignment_file_path": "/tmp/of3_template_data/template_cache/db82445986c3c5c7bcb87120e3f23fa9423893de8fb554f183c5c666088f41ef.npz",
+                    "template_entry_chain_ids": [
+                        "2hi4_A",
+                        "4i8v_B",
+                        "6o5y_C",
+                        "6udm_B",
+                        "4i8v_C",
+                        "6udm_A",
+                        "6udl_D",
+                        "6dwn_B",
+                        "6udm_D",
+                        "6dwm_D",
+                        "6dwm_C",
+                        "6dwn_C",
+                        "6o5y_A",
+                        "6o5y_B",
+                        "6o5y_D",
+                        "6dwn_D",
+                        "3c6g_A",
+                        "6b82_B",
+                        "6b82_A",
+                        "5iuz_B"
+                    ],
+                    "sdf_file_path": null
+                }
+            ],
+            "use_msas": true,
+            "use_paired_msas": true,
+            "use_main_msas": true,
+            "covalent_bonds": null
+        }
+    }
+}

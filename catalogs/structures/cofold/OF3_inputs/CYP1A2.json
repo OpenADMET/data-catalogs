@@ -1,6 +1,6 @@
 {
     	"queries":{
-    		"NAME": {
+    		"CYP1A2": {
     			"chains": [
     				{
     					"molecule_type": "protein",
