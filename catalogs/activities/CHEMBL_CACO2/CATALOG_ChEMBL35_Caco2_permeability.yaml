@@ -1,0 +1,96 @@
+aliases: {}
+data:
+  4abd22431dedb5a6:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/ChEMBL_Caco2_caco2_a_to_b_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  784a5d4c08891371:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/ChEMBL_Caco2_caco2_all_caco_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  7d972b02af671b86:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/ChEMBL_Caco2_caco2_b_to_a_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  e0b04e9fe731b855:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/ChEMBL_Caco2_caco2_b_to_a_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  e332ebac26c8a45f:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/ChEMBL_Caco2_caco2_all_caco_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  eb1366ea13f5f821:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/ChEMBL_Caco2_caco2_a_to_b_raw.parquet
+    metadata: {}
+    user_parameters: {}
+entries:
+  caco2_a_to_b_aggregated:
+    kwargs:
+      args:
+      - '{data(4abd22431dedb5a6)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  caco2_a_to_b_raw:
+    kwargs:
+      args:
+      - '{data(eb1366ea13f5f821)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  caco2_all_caco_aggregated:
+    kwargs:
+      args:
+      - '{data(784a5d4c08891371)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  caco2_all_caco_raw:
+    kwargs:
+      args:
+      - '{data(e332ebac26c8a45f)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  caco2_b_to_a_aggregated:
+    kwargs:
+      args:
+      - '{data(e0b04e9fe731b855)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  caco2_b_to_a_raw:
+    kwargs:
+      args:
+      - '{data(7d972b02af671b86)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2

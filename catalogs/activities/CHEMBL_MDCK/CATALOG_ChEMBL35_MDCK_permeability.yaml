@@ -1,0 +1,96 @@
+aliases: {}
+data:
+  30113ed0d4759c86:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_MDCK_permeability/ChEMBL_MDCK_mdck_all_mdck_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  590dc279c367e82c:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_MDCK_permeability/ChEMBL_MDCK_mdck_b_to_a_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  85e7ceb23073072a:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_MDCK_permeability/ChEMBL_MDCK_mdck_a_to_b_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  991d88b6754c8eca:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_MDCK_permeability/ChEMBL_MDCK_mdck_a_to_b_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  c7e4b01ee8228551:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_MDCK_permeability/ChEMBL_MDCK_mdck_b_to_a_raw.parquet
+    metadata: {}
+    user_parameters: {}
+  ea90087e1c750014:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_MDCK_permeability/ChEMBL_MDCK_mdck_all_mdck_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+entries:
+  mdck_a_to_b_aggregated:
+    kwargs:
+      args:
+      - '{data(991d88b6754c8eca)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  mdck_a_to_b_raw:
+    kwargs:
+      args:
+      - '{data(85e7ceb23073072a)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  mdck_all_mdck_aggregated:
+    kwargs:
+      args:
+      - '{data(ea90087e1c750014)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  mdck_all_mdck_raw:
+    kwargs:
+      args:
+      - '{data(30113ed0d4759c86)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  mdck_b_to_a_aggregated:
+    kwargs:
+      args:
+      - '{data(590dc279c367e82c)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  mdck_b_to_a_raw:
+    kwargs:
+      args:
+      - '{data(c7e4b01ee8228551)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
