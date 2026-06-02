@@ -21,6 +21,20 @@ data:
       url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/ChEMBL_Caco2_caco2_b_to_a_raw.parquet
     metadata: {}
     user_parameters: {}
+  9385cedc756abd75:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/trimmed/ChEMBL_Caco2_caco2_a_to_b_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  bd93eef6eba8557f:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/trimmed/ChEMBL_Caco2_caco2_b_to_a_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
   e0b04e9fe731b855:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
@@ -59,6 +73,14 @@ entries:
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
     user_parameters: {}
+  caco2_a_to_b_trimmed_aggregated:
+    kwargs:
+      args:
+      - '{data(9385cedc756abd75)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
   caco2_all_caco_aggregated:
     kwargs:
       args:
@@ -91,6 +113,17 @@ entries:
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
     user_parameters: {}
+  caco2_b_to_a_trimmed_aggregated:
+    kwargs:
+      args:
+      - '{data(bd93eef6eba8557f)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
 metadata: {}
-user_parameters: {}
+user_parameters:
+  CATALOG_DIR: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability
+  CATALOG_PATH: s3://openadmet-data-public-dev/ChEMBL35_Caco2_permeability/CATALOG_ChEMBL35_Caco2_permeability.yaml
+  STORAGE_OPTIONS: {}
 version: 2
