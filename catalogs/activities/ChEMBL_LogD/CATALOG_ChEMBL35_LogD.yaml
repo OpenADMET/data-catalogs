@@ -7,6 +7,13 @@ data:
       url: s3://openadmet-data-public-dev/ChEMBL35_LogD/ChEMBL_LogD_LogD_aggregated.parquet
     metadata: {}
     user_parameters: {}
+  95e44eef4c32498b:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL35_LogD/trimmed/ChEMBL_LogD_LogD_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
   cae4425382b0465c:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
@@ -27,6 +34,14 @@ entries:
     kwargs:
       args:
       - '{data(cae4425382b0465c)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LogD_trimmed_aggregated:
+    kwargs:
+      args:
+      - '{data(95e44eef4c32498b)}'
     metadata: {}
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
