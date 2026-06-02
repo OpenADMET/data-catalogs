@@ -1,52 +1,52 @@
 aliases: {}
 data:
-  45ce9e6f30ce5034:
+  08544719963dfb9b:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
       storage_options: null
-      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/ChEMBL_PPB_HPPB_raw.parquet
+      url: s3://openadmet-data-public-dev/ChEMBL37_PPB/ChEMBL_PPB_HPPB_raw.parquet
     metadata: {}
     user_parameters: {}
-  54851662e99ba81c:
+  5f4aba7c1db6b693:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
       storage_options: null
-      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/trimmed/ChEMBL_PPB_MPPB_aggregated.parquet
+      url: s3://openadmet-data-public-dev/ChEMBL37_PPB/ChEMBL_PPB_HPPB_aggregated.parquet
     metadata: {}
     user_parameters: {}
-  684e41ad98afb8db:
+  89fd35bff33d1e09:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
       storage_options: null
-      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/trimmed/ChEMBL_PPB_HPPB_aggregated.parquet
+      url: s3://openadmet-data-public-dev/ChEMBL37_PPB/ChEMBL_PPB_MPPB_aggregated.parquet
     metadata: {}
     user_parameters: {}
-  887dae638bb390b8:
+  b0ff9d046ad05bf3:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
       storage_options: null
-      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/ChEMBL_PPB_MPPB_aggregated.parquet
+      url: s3://openadmet-data-public-dev/ChEMBL37_PPB/ChEMBL_PPB_MPPB_raw.parquet
     metadata: {}
     user_parameters: {}
-  9ff739e883eb9064:
+  d66bc65fb56ad152:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
       storage_options: null
-      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/ChEMBL_PPB_MPPB_raw.parquet
+      url: s3://openadmet-data-public-dev/ChEMBL37_PPB/trimmed/ChEMBL_PPB_MPPB_aggregated.parquet
     metadata: {}
     user_parameters: {}
-  ca4e29834df34932:
+  ea912f9b79ec1ebe:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
       storage_options: null
-      url: s3://openadmet-data-public-dev/ChEMBL35_PPB/ChEMBL_PPB_HPPB_aggregated.parquet
+      url: s3://openadmet-data-public-dev/ChEMBL37_PPB/trimmed/ChEMBL_PPB_HPPB_aggregated.parquet
     metadata: {}
     user_parameters: {}
 entries:
   HPPB_aggregated:
     kwargs:
       args:
-      - '{data(ca4e29834df34932)}'
+      - '{data(5f4aba7c1db6b693)}'
     metadata: {}
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
@@ -54,7 +54,7 @@ entries:
   HPPB_raw:
     kwargs:
       args:
-      - '{data(45ce9e6f30ce5034)}'
+      - '{data(08544719963dfb9b)}'
     metadata: {}
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
@@ -62,7 +62,7 @@ entries:
   HPPB_trimmed_aggregated:
     kwargs:
       args:
-      - '{data(684e41ad98afb8db)}'
+      - '{data(ea912f9b79ec1ebe)}'
     metadata: {}
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
@@ -70,7 +70,7 @@ entries:
   MPPB_aggregated:
     kwargs:
       args:
-      - '{data(887dae638bb390b8)}'
+      - '{data(89fd35bff33d1e09)}'
     metadata: {}
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
@@ -78,7 +78,7 @@ entries:
   MPPB_raw:
     kwargs:
       args:
-      - '{data(9ff739e883eb9064)}'
+      - '{data(b0ff9d046ad05bf3)}'
     metadata: {}
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
@@ -86,7 +86,7 @@ entries:
   MPPB_trimmed_aggregated:
     kwargs:
       args:
-      - '{data(54851662e99ba81c)}'
+      - '{data(d66bc65fb56ad152)}'
     metadata: {}
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
