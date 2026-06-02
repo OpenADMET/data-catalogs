@@ -1,0 +1,51 @@
+aliases: {}
+data:
+  44cbe77077f4e050:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_LogD/trimmed/ChEMBL_LogD_LogD_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  b279a1bed89fb903:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_LogD/ChEMBL_LogD_LogD_aggregated.parquet
+    metadata: {}
+    user_parameters: {}
+  dce492b6c8483652:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_LogD/ChEMBL_LogD_LogD_raw.parquet
+    metadata: {}
+    user_parameters: {}
+entries:
+  LogD_aggregated:
+    kwargs:
+      args:
+      - '{data(b279a1bed89fb903)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LogD_raw:
+    kwargs:
+      args:
+      - '{data(dce492b6c8483652)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LogD_trimmed_aggregated:
+    kwargs:
+      args:
+      - '{data(44cbe77077f4e050)}'
+    metadata: {}
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
