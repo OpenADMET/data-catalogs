@@ -1,7 +1,8 @@
 # OpenADMET Data Catalogs
 [![Logo](https://img.shields.io/badge/OSMF-OpenADMET-%23002f4a)](https://openadmet.org/)
 [![Demos](https://img.shields.io/badge/GitHub-Demos-blue?logo=github)](https://github.com/OpenADMET/openadmet-demos)
-[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=fff)](https://try.openadmet.org)
+[![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=fff)](https://try.openadmet.org) [![DOI](https://zenodo.org/badge/933883435.svg)](https://doi.org/10.5281/zenodo.21504232)
+
 
 As part of our open-science mission, OpenADMET aims to curate and disseminate ADMET (Absorption, Distribution, Metabolism, Excretion, and Toxicity) data used to train our models for general use.
 
