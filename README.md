@@ -8,9 +8,10 @@ As part of our open-science mission, OpenADMET aims to curate and disseminate AD
 
 ## Overview
 An easy and convenient way of sharing and accessing these datasets (largely borrowed from the geosciences) is via `Intake` catalogs. `Intake` is a lightweight, user-friendly data access tool that simplifies data discovery, loading, and sharing.
-See here for more information: https://intake.readthedocs.io/en/latest/index.html
 
-This repository hosts `Intake` catalogs for various ADMET datasets curated by OpenADMET as well as the curation steps as implemented in `openadmet_toolkit`: https://github.com/OpenADMET/openadmet_toolkit
+This repository hosts `Intake` catalogs for various ADMET datasets curated by OpenADMET as well as the curation steps.
+
+See the [deposition guidelines](openadmet_activity_data_deposition_guidelines.pdf) for more information
 
 ## NOTE:
 
