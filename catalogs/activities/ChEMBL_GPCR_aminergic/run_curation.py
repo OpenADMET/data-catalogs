@@ -58,11 +58,9 @@ PANEL = {
 
 def gather(receptor, chembl_tid, endpoint):
     """Curated (aggregated, raw) activity frames for one receptor and endpoint."""
-    # NOTE: the field is `chembl_version`, NOT `version`. The curator is a
-    # pydantic model that silently ignores unknown kwargs, so `version=37`
-    # leaves chembl_version at its default of 34 and you curate the wrong
-    # release with no warning. The other notebooks in this repo pass `version=`
-    # and are affected; see README.
+    # NOTE: the field is `chembl_version`. Older toolkit releases silently
+    # ignored a `version=` kwarg and curated ChEMBL 34; the toolkit now accepts
+    # `version` as an alias and rejects unknown kwargs, but keep the check below.
     curator = PermissiveChEMBLTargetCurator(
         chembl_target_id=chembl_tid, chembl_version=CHEMBL_VER,
         standard_type=endpoint, require_pchembl=True,
