@@ -14,12 +14,124 @@ data:
       url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_AHR_CHEMBL3201_aggregated.parquet
     metadata: {}
     user_parameters: {}
+  4661443230bd3a64:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_FXR_CHEMBL2047_aggregated.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for FXR (CHEMBL2047), one row
+        per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: FXR
+      target_chembl_id: CHEMBL2047
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
+  534c939d6cd9c4b9:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_VDR_CHEMBL1977_aggregated.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for VDR (CHEMBL1977), one row
+        per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: VDR
+      target_chembl_id: CHEMBL1977
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
+  82e74cfae467ccab:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_FXR_CHEMBL2047_raw.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for FXR (CHEMBL2047), one row
+        per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: FXR
+      target_chembl_id: CHEMBL2047
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
+  8be8ea06419141be:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_CAR_CHEMBL5503_raw.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for CAR (CHEMBL5503), one row
+        per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: CAR
+      target_chembl_id: CHEMBL5503
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
+  be93fbbbf32d10ea:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_CAR_CHEMBL5503_aggregated.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for CAR (CHEMBL5503), one row
+        per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: CAR
+      target_chembl_id: CHEMBL5503
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
   d7b798476d4a7040:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
       storage_options: null
       url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_AHR_CHEMBL3201_raw.parquet
     metadata: {}
+    user_parameters: {}
+  dd6fa28438deda7a:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_VDR_CHEMBL1977_raw.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for VDR (CHEMBL1977), one row
+        per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: VDR
+      target_chembl_id: CHEMBL1977
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
+  f560b5169ce95039:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_LXR_alpha_CHEMBL2808_aggregated.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for LXR_alpha (CHEMBL2808),
+        one row per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
+  fda214d72b41a861:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_EC50/ChEMBL_EC50_LXR_alpha_CHEMBL2808_raw.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for LXR_alpha (CHEMBL2808),
+        one row per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
     user_parameters: {}
   fe19a0ba5a709fac:
     datatype: intake.readers.datatypes:Parquet
@@ -45,6 +157,96 @@ entries:
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
     user_parameters: {}
+  CAR_aggregated:
+    kwargs:
+      args:
+      - '{data(be93fbbbf32d10ea)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for CAR (CHEMBL5503), one row
+        per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: CAR
+      target_chembl_id: CHEMBL5503
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CAR_raw:
+    kwargs:
+      args:
+      - '{data(8be8ea06419141be)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for CAR (CHEMBL5503), one row
+        per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: CAR
+      target_chembl_id: CHEMBL5503
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_aggregated:
+    kwargs:
+      args:
+      - '{data(4661443230bd3a64)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for FXR (CHEMBL2047), one row
+        per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: FXR
+      target_chembl_id: CHEMBL2047
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_raw:
+    kwargs:
+      args:
+      - '{data(82e74cfae467ccab)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for FXR (CHEMBL2047), one row
+        per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: FXR
+      target_chembl_id: CHEMBL2047
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_aggregated:
+    kwargs:
+      args:
+      - '{data(f560b5169ce95039)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for LXR_alpha (CHEMBL2808),
+        one row per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_raw:
+    kwargs:
+      args:
+      - '{data(fda214d72b41a861)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for LXR_alpha (CHEMBL2808),
+        one row per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
   PXR_aggregated:
     kwargs:
       args:
@@ -61,6 +263,39 @@ entries:
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
     user_parameters: {}
+  VDR_aggregated:
+    kwargs:
+      args:
+      - '{data(534c939d6cd9c4b9)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for VDR (CHEMBL1977), one row
+        per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: EC50
+      source_version: '37'
+      target: VDR
+      target_chembl_id: CHEMBL1977
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  VDR_raw:
+    kwargs:
+      args:
+      - '{data(dd6fa28438deda7a)}'
+    metadata:
+      description: ChEMBL37 pChEMBL EC50 activity data for VDR (CHEMBL1977), one row
+        per source activity record.
+      endpoint: EC50
+      source_version: '37'
+      target: VDR
+      target_chembl_id: CHEMBL1977
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
 metadata: {}
-user_parameters: {}
+user_parameters:
+  CATALOG_DIR: file:///Users/dwwest/data-catalogs/catalogs/activities/ChEMBL_pChEMBL_EC50
+  CATALOG_PATH: /Users/dwwest/data-catalogs/catalogs/activities/ChEMBL_pChEMBL_EC50/CATALOG_ChEMBL37_EC50.yaml
+  STORAGE_OPTIONS: {}
 version: 2
