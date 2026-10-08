@@ -6,6 +6,13 @@ of targets, reporting both a binary active/inactive call and, for a subset, a fi
 potency (`pXC50`). This collection is EveBio's analog of `ChEMBL_pChEMBL_IC50` and
 `BindingDB_IC50`.
 
+**Spelling note**: the company stylizes its name "EvE Bio" (logo/footer: "EvE Bio, LLC";
+Hugging Face org: `eve-bio`). This collection uses "EveBio" (one token, no space)
+throughout -- directory names, `OPENADMET_SOURCE`, catalog prefixes -- since the
+`<SOURCE>_<ENDPOINT>` directory convention used across this repo doesn't accommodate a
+space in `<SOURCE>`, and a single consistent token is required so
+`OPENADMET_SOURCE == 'EveBio'` matches across every future EveBio deposition.
+
 **Why "IC50" when EveBio calls this "Antagonist" mode**: EveBio's own schema doesn't
 label the measurement as EC50 or IC50, only assay `mode` (Agonist/Antagonist).
 Mechanistically they're the same thing: an antagonist-mode TR-FRET assay titrates a
@@ -54,9 +61,19 @@ for your use before relying on this collection.
 - **Units**: `pxc50_mean`/`pxc50_median`/`pxc50_std` (and raw `outcome_potency_pxc50`) are
   unitless, −log10 of IC50 in molar. EveBio does not report IC50 in molar/nM directly,
   only the fitted pXC50 value.
-- **Manual intervention**: dropped `viability_assay_id` from the raw schema (all-null
-  across every row in this deposition; EveBio's counterscreen-viability linkage, not
-  applicable to these NR assays).
+- **Manual intervention**: dropped `viability_assay_id` and `assay__detailed_mechanism`
+  from the raw schema (both structurally all-null across every row in this deposition:
+  `viability_assay_id` is EveBio's counterscreen-viability linkage, not applicable to
+  these NR assays; `assay__detailed_mechanism` is unpopulated for every NR
+  `assay__mechanism` value present here). `pxc50_std` is null for every row in the CAR
+  and VDR aggregated files specifically -- not because it was dropped, but because every
+  compound in those files has `n_records == 1` (no repeat measurement to compute a spread
+  over), which the deposition guidelines treat as expected, not missing.
+- **No document provenance (`doc_id`/`doc_doi`/`doc_pubmed_id`/`doc_year`)**: EveBio is
+  the generator's own primary screening data, not a literature-curated database like
+  ChEMBL or BindingDB, so there is no publication to cite per measurement. `assay_id` and
+  `release` are the closest available provenance (which EveBio assay batch and release
+  produced the row).
 - **Known data-quality issues in the source, not introduced here**:
   - `target__uniprot_id` is wrong for `Heterodimer`-mechanism rows: it's overwritten with
     the heterodimer partner's accession (`RXRA`) instead of the queried target's own
@@ -82,7 +99,6 @@ for your use before relying on this collection.
 | `compound_id` | string | EveBio compound ID. | `EB000544` |
 | `mode` | string | Always `Antagonist` in this deposition (the source-side filter this collection corresponds to). | `Antagonist` |
 | `assay__mechanism` | string | Assay mechanism: `Co-Activator`, `Co-Repressor`, or `Heterodimer`. | `Heterodimer` |
-| `assay__detailed_mechanism` | string | Further mechanism detail, if provided. | `null` |
 | `assay__technology` | string | Assay detection technology. | `TR-FRET` |
 | `outcome_is_active` | bool | EveBio's binary active/inactive call. | `true` |
 | `outcome_potency_pxc50` | float64 | Fitted potency, −log10(IC50, M); null for qualitative-only rows. | `7.5` |

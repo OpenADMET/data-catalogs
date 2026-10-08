@@ -35,6 +35,10 @@ pChEMBL value, with no further assay-quality curation beyond ChEMBL's own report
   in a document-field rename (`document_journal` → `doc_journal`) and a float-formatting
   artifact in `doc_pubmed_id` (e.g. `"15055995.0"` → `"15055995"`); both are generation
   bugs in the one-off script used for this deposition, not edits to source values.
+  `activity_comment` is dropped from the CAR and VDR raw files specifically (not from
+  FXR or LXR_alpha): ChEMBL reports no activity comment for any EC50 record on those two
+  targets, so the column was structurally all-null and removed per the dtype guidelines
+  rather than shipped as dead weight.
 - **License / attribution**: ChEMBL data is distributed under CC BY-SA 3.0 Unported.
   Attribute as: ChEMBL (EMBL-EBI), release 37.
 
@@ -73,7 +77,7 @@ touched or regenerated as part of this work.
 | `standard_type` | string | Always `EC50` in this deposition (query filter). | `EC50` |
 | `standard_units` | string | Units of `standard_value`; always `nM` (query filter). | `nM` |
 | `standard_value` | float64 | Reported EC50 in `standard_units`. | `0.4` |
-| `activity_comment` | string | Free-text activity comment from ChEMBL (e.g. "inactive"), if any. | `null` |
+| `activity_comment` | string | Free-text activity comment from ChEMBL (e.g. "inactive"), if any. **Absent from the CAR and VDR files** (structurally all-null there; see Manual intervention above). Present in FXR and LXR_alpha. | `null` |
 | `target_chembl_id` | string | ChEMBL target ID. | `CHEMBL1977` |
 | `target_organism` | string | Target organism. | `Homo sapiens` |
 | `doc_id` | string | ChEMBL document ID. | `CHEMBL1149141` |
