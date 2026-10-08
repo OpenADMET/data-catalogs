@@ -1,0 +1,238 @@
+aliases: {}
+data:
+  342753ab0980ece4:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_FXR_Q96RI1_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for FXR (Q96RI1), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    user_parameters: {}
+  4dee59106513e585:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_CAR_Q14994_raw.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for CAR (Q14994), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    user_parameters: {}
+  56c6377cb0039d35:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_CAR_Q14994_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for CAR (Q14994), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    user_parameters: {}
+  91dcc2f0b98c88d5:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_LXR_alpha_Q13133_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for LXR_alpha (Q13133), one
+        row per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    user_parameters: {}
+  d1335e17c0713e1b:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_FXR_Q96RI1_raw.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for FXR (Q96RI1), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    user_parameters: {}
+  e525904906e3d469:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_VDR_P11473_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for VDR (P11473), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    user_parameters: {}
+  e8a3a47dc368e89b:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_VDR_P11473_raw.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for VDR (P11473), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    user_parameters: {}
+  eabc39c3254ed4b4:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_EC50/BindingDB_EC50_LXR_alpha_Q13133_raw.parquet
+    metadata:
+      description: BindingDB20261008 EC50 activity data for LXR_alpha (Q13133), one
+        row per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    user_parameters: {}
+entries:
+  CAR_aggregated:
+    kwargs:
+      args:
+      - '{data(56c6377cb0039d35)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for CAR (Q14994), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CAR_raw:
+    kwargs:
+      args:
+      - '{data(4dee59106513e585)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for CAR (Q14994), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_aggregated:
+    kwargs:
+      args:
+      - '{data(342753ab0980ece4)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for FXR (Q96RI1), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_raw:
+    kwargs:
+      args:
+      - '{data(d1335e17c0713e1b)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for FXR (Q96RI1), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_aggregated:
+    kwargs:
+      args:
+      - '{data(91dcc2f0b98c88d5)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for LXR_alpha (Q13133), one
+        row per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_raw:
+    kwargs:
+      args:
+      - '{data(eabc39c3254ed4b4)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for LXR_alpha (Q13133), one
+        row per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  VDR_aggregated:
+    kwargs:
+      args:
+      - '{data(e525904906e3d469)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for VDR (P11473), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  VDR_raw:
+    kwargs:
+      args:
+      - '{data(e8a3a47dc368e89b)}'
+    metadata:
+      description: BindingDB20261008 EC50 activity data for VDR (P11473), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2

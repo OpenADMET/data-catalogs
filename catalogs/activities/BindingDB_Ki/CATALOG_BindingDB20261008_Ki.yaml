@@ -1,0 +1,64 @@
+aliases: {}
+data:
+  762f95c61bc46685:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_Ki/BindingDB_Ki_LXR_alpha_Q13133_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 Ki activity data for LXR_alpha (Q13133), one
+        row per compound.
+      endpoint: Ki
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    user_parameters: {}
+  dff7587a242bd784:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_Ki/BindingDB_Ki_LXR_alpha_Q13133_raw.parquet
+    metadata:
+      description: BindingDB20261008 Ki activity data for LXR_alpha (Q13133), one
+        row per source record.
+      endpoint: Ki
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    user_parameters: {}
+entries:
+  LXR_alpha_aggregated:
+    kwargs:
+      args:
+      - '{data(762f95c61bc46685)}'
+    metadata:
+      description: BindingDB20261008 Ki activity data for LXR_alpha (Q13133), one
+        row per compound.
+      endpoint: Ki
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_raw:
+    kwargs:
+      args:
+      - '{data(dff7587a242bd784)}'
+    metadata:
+      description: BindingDB20261008 Ki activity data for LXR_alpha (Q13133), one
+        row per source record.
+      endpoint: Ki
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
