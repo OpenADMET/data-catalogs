@@ -42,6 +42,20 @@ data:
       url: s3://openadmet-data-public-dev/ChEMBL37_Ki/ChEMBL_Ki_AHR_CHEMBL3201_raw.parquet
     metadata: {}
     user_parameters: {}
+  2ce4022032574398:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_Ki/ChEMBL_Ki_LXR_alpha_CHEMBL2808_raw.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL Ki activity data for LXR_alpha (CHEMBL2808), one
+        row per source activity record.
+      endpoint: Ki
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
+    user_parameters: {}
   60eee52c79d0dd7b:
     datatype: intake.readers.datatypes:Parquet
     kwargs:
@@ -90,6 +104,20 @@ data:
       storage_options: null
       url: s3://openadmet-data-public-dev/ChEMBL37_Ki/ChEMBL_Ki_PXR_CHEMBL3401_raw.parquet
     metadata: {}
+    user_parameters: {}
+  b4c09ae7a17a7419:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/ChEMBL37_Ki/ChEMBL_Ki_LXR_alpha_CHEMBL2808_aggregated.parquet
+    metadata:
+      description: ChEMBL37 pChEMBL Ki activity data for LXR_alpha (CHEMBL2808), one
+        row per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: Ki
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
     user_parameters: {}
   cde26f3a10d6446a:
     datatype: intake.readers.datatypes:Parquet
@@ -225,6 +253,36 @@ entries:
     output_instance: pandas:DataFrame
     reader: intake.readers.readers:PandasParquet
     user_parameters: {}
+  LXR_alpha_aggregated:
+    kwargs:
+      args:
+      - '{data(b4c09ae7a17a7419)}'
+    metadata:
+      description: ChEMBL37 pChEMBL Ki activity data for LXR_alpha (CHEMBL2808), one
+        row per compound (aggregated by OPENADMET_CANONICAL_SMILES/INCHIKEY).
+      endpoint: Ki
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_raw:
+    kwargs:
+      args:
+      - '{data(2ce4022032574398)}'
+    metadata:
+      description: ChEMBL37 pChEMBL Ki activity data for LXR_alpha (CHEMBL2808), one
+        row per source activity record.
+      endpoint: Ki
+      source_version: '37'
+      target: LXR_alpha
+      target_chembl_id: CHEMBL2808
+      units: nM (standard_value*); pchembl_value* is unitless
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
   PXR_aggregated:
     kwargs:
       args:
@@ -242,5 +300,8 @@ entries:
     reader: intake.readers.readers:PandasParquet
     user_parameters: {}
 metadata: {}
-user_parameters: {}
+user_parameters:
+  CATALOG_DIR: file:///Users/dwwest/data-catalogs/catalogs/activities/ChEMBL_pChEMBL_Ki
+  CATALOG_PATH: /Users/dwwest/data-catalogs/catalogs/activities/ChEMBL_pChEMBL_Ki/CATALOG_ChEMBL37_Ki.yaml
+  STORAGE_OPTIONS: {}
 version: 2

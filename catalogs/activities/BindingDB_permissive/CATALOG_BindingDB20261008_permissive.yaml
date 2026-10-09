@@ -1,0 +1,238 @@
+aliases: {}
+data:
+  17e296e9d5c4b280:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_VDR_P11473_raw.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for VDR (P11473), one
+        row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    user_parameters: {}
+  5593f37c3b29b39a:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_FXR_Q96RI1_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for FXR (Q96RI1), one
+        row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    user_parameters: {}
+  664f4da9ffb87a3e:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_LXR_alpha_Q13133_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for LXR_alpha (Q13133),
+        one row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    user_parameters: {}
+  8f6219b02b84bce2:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_CAR_Q14994_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for CAR (Q14994), one
+        row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    user_parameters: {}
+  a9bf367c930ca239:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_VDR_P11473_aggregated.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for VDR (P11473), one
+        row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    user_parameters: {}
+  c422ae00215705a8:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_LXR_alpha_Q13133_raw.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for LXR_alpha (Q13133),
+        one row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    user_parameters: {}
+  ca6248ae0d6abb66:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_FXR_Q96RI1_raw.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for FXR (Q96RI1), one
+        row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    user_parameters: {}
+  d3b6225b4c087425:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261008_permissive/BindingDB_permissive_CAR_Q14994_raw.parquet
+    metadata:
+      description: BindingDB20261008 permissive activity data for CAR (Q14994), one
+        row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    user_parameters: {}
+entries:
+  CAR_aggregated:
+    kwargs:
+      args:
+      - '{data(8f6219b02b84bce2)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for CAR (Q14994), one
+        row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CAR_raw:
+    kwargs:
+      args:
+      - '{data(d3b6225b4c087425)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for CAR (Q14994), one
+        row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_aggregated:
+    kwargs:
+      args:
+      - '{data(5593f37c3b29b39a)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for FXR (Q96RI1), one
+        row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_raw:
+    kwargs:
+      args:
+      - '{data(ca6248ae0d6abb66)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for FXR (Q96RI1), one
+        row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_aggregated:
+    kwargs:
+      args:
+      - '{data(664f4da9ffb87a3e)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for LXR_alpha (Q13133),
+        one row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_raw:
+    kwargs:
+      args:
+      - '{data(c422ae00215705a8)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for LXR_alpha (Q13133),
+        one row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  VDR_aggregated:
+    kwargs:
+      args:
+      - '{data(a9bf367c930ca239)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for VDR (P11473), one
+        row per compound.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  VDR_raw:
+    kwargs:
+      args:
+      - '{data(17e296e9d5c4b280)}'
+    metadata:
+      description: BindingDB20261008 permissive activity data for VDR (P11473), one
+        row per source record.
+      endpoint: BindingDB_permissive
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2

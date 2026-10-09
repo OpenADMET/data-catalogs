@@ -1,0 +1,238 @@
+aliases: {}
+data:
+  92795edb68332735:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_CAR_Q14994_raw.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for CAR (Q14994), one row per
+        source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+  9d18302a14e1d57d:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_FXR_Q96RI1_raw.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for FXR (Q96RI1), one row per
+        source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+  cb8f130493a872f6:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_VDR_P11473_aggregated.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for VDR (P11473), one row per
+        compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+  d51d15f7cd85b7d8:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_FXR_Q96RI1_aggregated.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for FXR (Q96RI1), one row per
+        compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+  e90e571b355ffe1a:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_LXR_alpha_Q13133_raw.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for LXR_alpha (Q13133), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+  f722e6dd7c2d3a3e:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_VDR_P11473_raw.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for VDR (P11473), one row per
+        source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+  f8fc5e16312b67d2:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_CAR_Q14994_aggregated.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for CAR (Q14994), one row per
+        compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+  fded211bd546a38c:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/EveBio20261008_EC50/EveBio_EC50_LXR_alpha_Q13133_aggregated.parquet
+    metadata:
+      description: EveBio20261008 EC50 activity data for LXR_alpha (Q13133), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    user_parameters: {}
+entries:
+  CAR_aggregated:
+    kwargs:
+      args:
+      - '{data(f8fc5e16312b67d2)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for CAR (Q14994), one row per
+        compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CAR_raw:
+    kwargs:
+      args:
+      - '{data(92795edb68332735)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for CAR (Q14994), one row per
+        source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: CAR
+      target_uniprot_id: Q14994
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_aggregated:
+    kwargs:
+      args:
+      - '{data(d51d15f7cd85b7d8)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for FXR (Q96RI1), one row per
+        compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  FXR_raw:
+    kwargs:
+      args:
+      - '{data(9d18302a14e1d57d)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for FXR (Q96RI1), one row per
+        source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: FXR
+      target_uniprot_id: Q96RI1
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_aggregated:
+    kwargs:
+      args:
+      - '{data(fded211bd546a38c)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for LXR_alpha (Q13133), one row
+        per compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  LXR_alpha_raw:
+    kwargs:
+      args:
+      - '{data(e90e571b355ffe1a)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for LXR_alpha (Q13133), one row
+        per source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: LXR_alpha
+      target_uniprot_id: Q13133
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  VDR_aggregated:
+    kwargs:
+      args:
+      - '{data(cb8f130493a872f6)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for VDR (P11473), one row per
+        compound.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  VDR_raw:
+    kwargs:
+      args:
+      - '{data(f722e6dd7c2d3a3e)}'
+    metadata:
+      description: EveBio20261008 EC50 activity data for VDR (P11473), one row per
+        source record.
+      endpoint: EC50
+      source_version: '20261008'
+      target: VDR
+      target_uniprot_id: P11473
+      units: pXC50 (unitless, -log10 of unspecified XC50 in M)
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
