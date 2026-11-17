@@ -1,0 +1,412 @@
+aliases: {}
+data:
+  04942dff0f27ff53:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2C9_P11712_raw.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C9 (P11712), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C9
+      target_uniprot_id: P11712
+      units: nM
+    user_parameters: {}
+  0ead78d370d1f38b:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2C8_P10632_raw.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C8 (P10632), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C8
+      target_uniprot_id: P10632
+      units: nM
+    user_parameters: {}
+  25630c61268b820b:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP3A4_P08684_aggregated.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP3A4 (P08684), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP3A4
+      target_uniprot_id: P08684
+      units: nM
+    user_parameters: {}
+  407c9debc3b5128b:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP3A4_P08684_raw.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP3A4 (P08684), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP3A4
+      target_uniprot_id: P08684
+      units: nM
+    user_parameters: {}
+  596c2f997fc77a13:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2C19_P33261_raw.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C19 (P33261), one
+        row per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C19
+      target_uniprot_id: P33261
+      units: nM
+    user_parameters: {}
+  6c1672c37b8d0da1:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2B6_P20813_aggregated.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2B6 (P20813), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2B6
+      target_uniprot_id: P20813
+      units: nM
+    user_parameters: {}
+  6e1f01ff78f51b25:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2D6_P10635_aggregated.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2D6 (P10635), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2D6
+      target_uniprot_id: P10635
+      units: nM
+    user_parameters: {}
+  6f3b185c5693c745:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2C8_P10632_aggregated.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C8 (P10632), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C8
+      target_uniprot_id: P10632
+      units: nM
+    user_parameters: {}
+  b54723e655816198:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2C9_P11712_aggregated.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C9 (P11712), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C9
+      target_uniprot_id: P11712
+      units: nM
+    user_parameters: {}
+  c8affa1e2db476c3:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP1A2_P05177_raw.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP1A2 (P05177), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP1A2
+      target_uniprot_id: P05177
+      units: nM
+    user_parameters: {}
+  df1a57b2d03b181b:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP1A2_P05177_aggregated.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP1A2 (P05177), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP1A2
+      target_uniprot_id: P05177
+      units: nM
+    user_parameters: {}
+  e608eefc9952e5b5:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2B6_P20813_raw.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2B6 (P20813), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2B6
+      target_uniprot_id: P20813
+      units: nM
+    user_parameters: {}
+  e6de304386433196:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2C19_P33261_aggregated.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C19 (P33261), one
+        row per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C19
+      target_uniprot_id: P33261
+      units: nM
+    user_parameters: {}
+  fa671b93bd588647:
+    datatype: intake.readers.datatypes:Parquet
+    kwargs:
+      storage_options: null
+      url: s3://openadmet-data-public-dev/BindingDB20261019_IC50/BindingDB_IC50_CYP2D6_P10635_raw.parquet
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2D6 (P10635), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2D6
+      target_uniprot_id: P10635
+      units: nM
+    user_parameters: {}
+entries:
+  CYP1A2_aggregated:
+    kwargs:
+      args:
+      - '{data(df1a57b2d03b181b)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP1A2 (P05177), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP1A2
+      target_uniprot_id: P05177
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP1A2_raw:
+    kwargs:
+      args:
+      - '{data(c8affa1e2db476c3)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP1A2 (P05177), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP1A2
+      target_uniprot_id: P05177
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2B6_aggregated:
+    kwargs:
+      args:
+      - '{data(6c1672c37b8d0da1)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2B6 (P20813), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2B6
+      target_uniprot_id: P20813
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2B6_raw:
+    kwargs:
+      args:
+      - '{data(e608eefc9952e5b5)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2B6 (P20813), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2B6
+      target_uniprot_id: P20813
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2C19_aggregated:
+    kwargs:
+      args:
+      - '{data(e6de304386433196)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C19 (P33261), one
+        row per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C19
+      target_uniprot_id: P33261
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2C19_raw:
+    kwargs:
+      args:
+      - '{data(596c2f997fc77a13)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C19 (P33261), one
+        row per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C19
+      target_uniprot_id: P33261
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2C8_aggregated:
+    kwargs:
+      args:
+      - '{data(6f3b185c5693c745)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C8 (P10632), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C8
+      target_uniprot_id: P10632
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2C8_raw:
+    kwargs:
+      args:
+      - '{data(0ead78d370d1f38b)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C8 (P10632), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C8
+      target_uniprot_id: P10632
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2C9_aggregated:
+    kwargs:
+      args:
+      - '{data(b54723e655816198)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C9 (P11712), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C9
+      target_uniprot_id: P11712
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2C9_raw:
+    kwargs:
+      args:
+      - '{data(04942dff0f27ff53)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2C9 (P11712), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2C9
+      target_uniprot_id: P11712
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2D6_aggregated:
+    kwargs:
+      args:
+      - '{data(6e1f01ff78f51b25)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2D6 (P10635), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2D6
+      target_uniprot_id: P10635
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP2D6_raw:
+    kwargs:
+      args:
+      - '{data(fa671b93bd588647)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP2D6 (P10635), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP2D6
+      target_uniprot_id: P10635
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP3A4_aggregated:
+    kwargs:
+      args:
+      - '{data(25630c61268b820b)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP3A4 (P08684), one row
+        per compound.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP3A4
+      target_uniprot_id: P08684
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+  CYP3A4_raw:
+    kwargs:
+      args:
+      - '{data(407c9debc3b5128b)}'
+    metadata:
+      description: BindingDB20261019 IC50 activity data for CYP3A4 (P08684), one row
+        per source record.
+      endpoint: IC50
+      source_version: '20261019'
+      target: CYP3A4
+      target_uniprot_id: P08684
+      units: nM
+    output_instance: pandas:DataFrame
+    reader: intake.readers.readers:PandasParquet
+    user_parameters: {}
+metadata: {}
+user_parameters: {}
+version: 2
